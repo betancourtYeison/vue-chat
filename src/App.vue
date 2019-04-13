@@ -1,31 +1,50 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <chat id="app"/>
 </template>
 
+<script>
+import Chat from "@/components/Chat.vue";
+export default {
+    components: { Chat }
+};
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+    font-size: 62.5% !important; /* 10px / 16px = 0.625 */
 }
-#nav {
-  padding: 30px;
+a {
+    text-decoration: none;
+    color: #0058be;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+button:focus {
+    outline: 0;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+input[type="text"] {
+    border-radius: 5px;
+    font-size: 2.4rem;
+    width: 95%;
+    line-height: 4rem;
+    padding: 3px;
+}
+.main {
+    background-color: #0045cb;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 3rem;
+    text-align: center;
+}
+.section {
+    font-size: 2.4rem;
+    color: #202020;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.attribute {
+    margin: 10px;
 }
 </style>
